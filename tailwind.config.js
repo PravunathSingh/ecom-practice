@@ -4,11 +4,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
+      center: true,
       padding: {
-        default: '1rem',
+        DEFAULT: '2rem',
         sm: '2rem',
         lg: '4rem',
         xl: '5rem',
+        '2xl': '6rem',
+        '3xl': '6.7rem',
       },
     },
     extend: {
@@ -21,6 +24,10 @@ module.exports = {
           "url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
         'women-hero':
           "url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
+      },
+
+      fontFamily: {
+        rubik: ['Rubik', 'Roboto'],
       },
     },
   },

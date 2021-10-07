@@ -14,24 +14,58 @@ const CategoryHeader = () => {
     cssEase: 'linear',
   };
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden font-rubik'>
       <Slider {...settings}>
-        <div className='relative bg-cover bg-center bg-no-repeat min-h-[450px] bg-electronics-hero'>
-          <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
-          <div className='relative grid min-h-[450px] place-content-center'>
-            <h1 className='text-3xl font-medium text-white'>
-              Lorem ipsum dolor sit amet.
+        <div className='relative bg-cover bg-center bg-no-repeat min-h-[300px] lg:min-h-[450px] bg-electronics-hero'>
+          <div className='absolute top-0 left-0 w-full h-full bg-gray-900 opacity-60'></div>
+          <div className='relative max-w-2xl mx-auto grid min-h-[300px] lg:min-h-[450px] place-content-center'>
+            <h1 className='mb-8 text-3xl font-semibold leading-relaxed text-center text-gray-100 lg:leading-relaxed lg:mb-10 lg:text-5xl'>
+              Best Electronics at the Cheapest Price
             </h1>
+            <p className='text-lg font-medium text-center text-gray-300 lg:text-xl'>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+              quia culpa voluptatibus aperiam unde iusto?
+            </p>
           </div>
         </div>
-        <div className='relative bg-no-repeat bg-cover bg-center min-h-[450px] bg-men-hero'>
-          <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
+
+        <div className='relative bg-cover bg-center bg-no-repeat min-h-[300px] lg:min-h-[450px] bg-men-hero'>
+          <div className='absolute top-0 left-0 w-full h-full bg-gray-900 opacity-60'></div>
+          <div className='relative max-w-2xl mx-auto grid min-h-[300px] lg:min-h-[450px] place-content-center'>
+            <h1 className='mb-8 text-3xl font-semibold leading-relaxed text-center text-gray-100 lg:leading-relaxed lg:mb-10 lg:text-5xl'>
+              Trending Men's Wear at the Cheapest Price
+            </h1>
+            <p className='text-lg font-medium text-center text-gray-300 lg:text-xl'>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+              quia culpa voluptatibus aperiam unde iusto?
+            </p>
+          </div>
         </div>
-        <div className='relative min-h-[450px] bg-cover bg-center bg-no-repeat bg-women-hero'>
-          <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
+
+        <div className='relative bg-cover bg-center bg-no-repeat min-h-[300px] lg:min-h-[450px] bg-women-hero'>
+          <div className='absolute top-0 left-0 w-full h-full bg-gray-900 opacity-60'></div>
+          <div className='relative max-w-2xl mx-auto grid min-h-[300px] lg:min-h-[450px] place-content-center'>
+            <h1 className='mb-8 text-3xl font-semibold leading-relaxed text-center text-gray-100 lg:leading-relaxed lg:mb-10 lg:text-5xl'>
+              Trendy Women's Wear at the Cheapest Price
+            </h1>
+            <p className='text-lg font-medium text-center text-gray-300 lg:text-xl'>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+              quia culpa voluptatibus aperiam unde iusto?
+            </p>
+          </div>
         </div>
-        <div className='relative bg-no-repeat bg-cover bg-center min-h-[450px] bg-jwellery-hero'>
-          <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
+
+        <div className='relative bg-cover bg-center bg-no-repeat min-h-[300px] lg:min-h-[450px] bg-jwellery-hero'>
+          <div className='absolute top-0 left-0 w-full h-full bg-gray-900 opacity-60'></div>
+          <div className='relative max-w-2xl mx-auto grid min-h-[300px] lg:min-h-[450px] place-content-center'>
+            <h1 className='mb-8 text-3xl font-semibold leading-relaxed text-center text-gray-100 lg:leading-relaxed lg:mb-10 lg:text-5xl'>
+              Trending Jwellery at the Cheapest Price
+            </h1>
+            <p className='text-lg font-medium text-center text-gray-300 lg:text-xl'>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+              quia culpa voluptatibus aperiam unde iusto?
+            </p>
+          </div>
         </div>
       </Slider>
     </div>
