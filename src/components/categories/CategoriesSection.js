@@ -1,39 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Category from './Category';
+import { Link } from 'react-router-dom';
 // import Spinner from '../ui/Spinner';
 
 const CategoriesSection = () => {
-  const [posts, setPosts] = useState([]);
+  const [categoriesData, setCategoriesData] = useState([]);
 
   useEffect(() => {
-    const axiosPosts = async () => {
+    const fetchCategories = async () => {
       const response = await axios(
-        'https://jsonplaceholder.typicode.com/users'
+        'https://fakestoreapi.com/products/categories'
       );
-      setPosts(response.data);
+      setCategoriesData(response.data);
     };
-    console.log(posts);
-    axiosPosts();
+    console.log(categoriesData);
+    fetchCategories();
   }, []);
 
-  const useaxiosPosts = posts.map((post) => {
+  const categories = categoriesData.map((category) => {
     return (
-      <div>
-        <h3>{post.id}</h3>
-        <h4>{post.name}</h4>
-        <p>{post.phone}</p>
+      <div className='container my-20 font-rubik md:my-36'>
+        <div className='flex items-center justify-between mb-12 md:mb-16'>
+          <h1 className='text-2xl italic font-semibold text-gray-800 uppercase xl:text-4xl'>
+            {category}
+          </h1>
+          <Link to={`/products/${category}`}>
+            <h5 className='text-base font-medium text-blue-600 xl:text-xl'>
+              See All Products
+            </h5>
+          </Link>
+        </div>
+
+        <Category category={category} />
       </div>
     );
   });
 
-  return (
-    <>
-      <h1>Axios With UseState and UseEffect</h1>
-      <h2>Dummy API - https://jsonplaceholder.typicode.com/posts</h2>
-      <div className='axioscontainer'>{posts && useaxiosPosts}</div>
-    </>
-  );
+  return <>{categories}</>;
 };
 
 export default CategoriesSection;
