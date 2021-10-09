@@ -25,6 +25,7 @@ const Category = ({ category }) => {
           price={category.price}
           description={category.description}
           rate={category.rating.rate}
+          id={category.id}
         />
       </div>
     );
@@ -37,5 +38,3 @@ const Category = ({ category }) => {
   );
 };
 export default Category;
-
-// `https://fakestoreapi.com/products/${category}?limit=3`
