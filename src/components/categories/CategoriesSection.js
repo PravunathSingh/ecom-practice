@@ -25,7 +25,7 @@ const CategoriesSection = () => {
           <h1 className='text-2xl italic font-semibold text-gray-800 uppercase xl:text-4xl'>
             {category}
           </h1>
-          <Link to={`/products/${category}`}>
+          <Link to={`/products/category/${category}`}>
             <h5 className='text-base font-medium text-blue-600 xl:text-xl'>
               See All Products
             </h5>
