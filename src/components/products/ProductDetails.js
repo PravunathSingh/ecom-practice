@@ -16,8 +16,13 @@ const ProductDetails = () => {
   return (
     <div className='font-rubik'>
       <Navbar />
-      <div className='container grid gap-12 place-content-center place-items-center lg:grid-cols-2 my-28 lg:my-40 '>
-        <div className=''>
+      <div className='container'>
+        <h1 className='mt-24 text-4xl font-semibold text-center md:text-left md:text-5xl md:mt-32'>
+          Product Details
+        </h1>
+      </div>
+      <div className='container grid gap-12 place-content-center place-items-center lg:grid-cols-2 my-28'>
+        <div className='h-full rounded-xl'>
           <img
             src={productDetails.image}
             alt='product-details'
@@ -32,13 +37,40 @@ const ProductDetails = () => {
           <h5 className='mb-8 text-xl font-medium md:mb-10 md:text-2xl'>
             Price: <span className='font-bold'>${productDetails.price}</span>
           </h5>
-          <h5 className='mb-12 text-lg font-normal md:mb-16 md:text-xl'>
+          <h5 className='mb-8 text-lg font-normal md:mb-10 md:text-xl'>
             Availability: <span className='font-medium'>In Stock</span>
           </h5>
-          <p className='text-base font-normal leading-relaxed md:text-lg md:leading-relaxed'>
-            {productDetails.description}
-          </p>
+          {/* <h5 className='mb-8 text-lg font-normal md:mb-10 md:text-xl'>
+            Rating:
+            <span className='font-medium'>
+              {productDetails.rating.rate} / 5
+            </span>
+          </h5> */}
+
+          <div className='my-4 md:my-6 md:hidden'>
+            <h4 className='mb-4 text-lg font-medium text-gray-800 md:mb-6'>
+              Description:
+            </h4>
+            <p className='mb-12 text-sm text-gray-600'>
+              {productDetails.description}
+            </p>
+          </div>
+
+          <button className='w-full px-8 py-3 mb-4 text-base font-medium transition-all duration-300 border-2 md:mb-0 md:mr-8 md:text-lg md:w-auto hover:-translate-y-2 bg-brand-primary hover:bg-brand-primary-light border-brand-primary text-bg-brand rounded-xl focus:ring-2 ring-offset-2 ring-brand-primary'>
+            Add To Cart
+          </button>
+
+          <button className='w-full px-8 py-3 mb-40 text-base font-medium transition-all duration-300 border-2 md:mb-0 md:text-lg md:w-auto border-brand-primary hover:bg-brand-primary-light rounded-xl hover:text-bg-brand'>
+            Add To Wish List
+          </button>
         </div>
+      </div>
+
+      <div className='container hidden mb-40 md:block'>
+        <h4 className='mb-4 text-3xl font-medium text-gray-800 md:mb-6'>
+          Description:
+        </h4>
+        <p className='text-xl text-gray-600'>{productDetails.description}</p>
       </div>
     </div>
   );

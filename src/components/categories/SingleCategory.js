@@ -3,11 +3,14 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../ui/Navbar';
 import ProductCard from '../ui/ProductCard';
+import SingleCategoryHeader from './SingleCategoryHeader';
 
 const SingleCategory = () => {
   const location = useLocation();
   const url = `https://fakestoreapi.com/${location.pathname}`;
   const lastSegment = url.split('/').pop();
+
+  console.log(lastSegment);
 
   const [singleCategory, setSingleCategory] = useState([]);
   useEffect(() => {
@@ -24,15 +27,7 @@ const SingleCategory = () => {
   const singleCategoryData = singleCategory.map((single) => {
     return (
       <div>
-        <ProductCard
-          key={single.id}
-          title={single.title}
-          img={single.image}
-          price={single.price}
-          description={single.description}
-          rate={single.rating.rate}
-          id={single.id}
-        />
+        <ProductCard key={single.id} category={single} />
       </div>
     );
   });
@@ -40,6 +35,9 @@ const SingleCategory = () => {
   return (
     <div>
       <Navbar />
+      <div className='flex flex-wrap items-center justify-between gap-4'>
+        <h1>Showing: {singleCategory.length} Products</h1>
+      </div>
       <div className='container grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
         {singleCategoryData}
       </div>

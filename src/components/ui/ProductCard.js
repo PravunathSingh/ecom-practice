@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const ProductCard = ({ img, title, price, id, rate }) => {
+const ProductCard = ({ category }) => {
   return (
-    <div className=''>
+    <div className='bg-gray-50'>
       <div className='overflow-hidden transition-all duration-200 border-2 border-gray-300 rounded-2xl hover:shadow-xl'>
         <div className='relative grid mb-6 place-content-center aspect-w-16 aspect-h-9'>
-          <img src={img} alt='product' className='object-cover object-center' />
+          <img
+            src={category.image}
+            alt='product'
+            className='object-cover object-center'
+          />
         </div>
         <div className='px-4 py-6 md:px-6 md:py-8'>
           <div className='mb-6'>
-            <h2 className='text-lg font-semibold md:text-xl'>{title}</h2>
+            <h2 className='text-lg font-semibold md:text-xl'>
+              {category.title}
+            </h2>
           </div>
 
           <div className='flex flex-wrap items-center justify-between gap-8 mb-6'>
             <h5 className='text-lg font-medium'>
-              Price: <span className='font-semibold'>${price}</span>
+              Price: <span className='font-semibold'>${category.price}</span>
             </h5>
             <h5 className='text-lg font-medium'>
-              Rating: <span className='font-semibold'>{rate}</span>
+              Rating:{' '}
+              <span className='font-semibold'>{category.rating.rate}</span>
             </h5>
           </div>
 
@@ -26,7 +33,7 @@ const ProductCard = ({ img, title, price, id, rate }) => {
             <div>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='w-10 h-10 cursor-pointer'
+                className='w-8 h-8 cursor-pointer'
                 fill='none'
                 viewBox='0 0 24 24'
                 stroke='currentColor'
@@ -42,7 +49,7 @@ const ProductCard = ({ img, title, price, id, rate }) => {
             <div>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='w-10 h-10 cursor-pointer'
+                className='w-8 h-8 cursor-pointer'
                 fill='none'
                 viewBox='0 0 24 24'
                 stroke='currentColor'
@@ -58,7 +65,7 @@ const ProductCard = ({ img, title, price, id, rate }) => {
             <div>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='w-10 h-10 cursor-pointer'
+                className='w-8 h-8 cursor-pointer'
                 fill='none'
                 viewBox='0 0 24 24'
                 stroke='currentColor'
@@ -74,8 +81,8 @@ const ProductCard = ({ img, title, price, id, rate }) => {
           </div>
 
           <div className='cursor-pointer'>
-            <Link to={`/productDetails/${id}`}>
-              <h5 className='font-medium text-blue-400 transition-all duration-200 hover:text-blue-500'>
+            <Link to={`/productDetails/${category.id}`}>
+              <h5 className='font-medium transition-all duration-200 text-brand-secondary hover:text-brand-primary'>
                 See Product Details
               </h5>
             </Link>

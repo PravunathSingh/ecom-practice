@@ -29,10 +29,20 @@ module.exports = {
       fontFamily: {
         rubik: ['Rubik', 'Roboto'],
       },
+
+      colors: {
+        'bg-brand': '#FDFAF6',
+        'brand-primary': '#064420',
+        'brand-primary-light': '#386C5F',
+        'brand-secondary': '#6B7B6E',
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/aspect-ratio')],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+    require('@tailwindcss/forms'),
+  ],
 };

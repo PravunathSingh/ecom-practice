@@ -31,7 +31,7 @@ const CategoryHeader = () => {
 
         <div className='relative bg-cover bg-center bg-no-repeat min-h-[300px] lg:min-h-[450px] bg-men-hero'>
           <div className='absolute top-0 left-0 w-full h-full bg-gray-900 opacity-60'></div>
-          <div className='relative container max-w-2xl mx-auto grid min-h-[300px] lg:min-h-[450px] place-content-center'>
+          <div className='relative container max-w-4xl mx-auto grid min-h-[300px] lg:min-h-[450px] place-content-center'>
             <h1 className='mb-8 text-3xl font-semibold leading-relaxed text-center text-gray-100 lg:leading-relaxed lg:mb-10 lg:text-5xl'>
               Trending Men's Wear at the Cheapest Price
             </h1>

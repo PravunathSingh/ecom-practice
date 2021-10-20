@@ -18,15 +18,7 @@ const Category = ({ category }) => {
   const categoriesList = categoryData.map((category) => {
     return (
       <div>
-        <ProductCard
-          key={category.id}
-          title={category.title}
-          img={category.image}
-          price={category.price}
-          description={category.description}
-          rate={category.rating.rate}
-          id={category.id}
-        />
+        <ProductCard key={category.id} category={category} />
       </div>
     );
   });

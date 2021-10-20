@@ -21,12 +21,12 @@ const CategoriesSection = () => {
   const categories = categoriesData.map((category) => {
     return (
       <div className='container my-20 font-rubik md:my-36'>
-        <div className='flex items-center justify-between mb-12 md:mb-16'>
+        <div className='flex flex-wrap items-center justify-between gap-4 mb-12 md:mb-16'>
           <h1 className='text-2xl italic font-semibold text-gray-800 uppercase xl:text-4xl'>
             {category}
           </h1>
           <Link to={`/products/category/${category}`}>
-            <h5 className='text-base font-medium text-blue-600 xl:text-xl'>
+            <h5 className='text-base font-medium text-brand-primary xl:text-xl'>
               See All Products
             </h5>
           </Link>

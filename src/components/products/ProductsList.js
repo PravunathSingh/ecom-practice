@@ -16,15 +16,7 @@ const ProductsList = () => {
   const allProducts = productsList.map((product) => {
     return (
       <div>
-        <ProductCard
-          key={product.id}
-          title={product.title}
-          img={product.image}
-          price={product.price}
-          description={product.description}
-          rate={product.rating.rate}
-          id={product.id}
-        />
+        <ProductCard key={product.id} category={product} />
       </div>
     );
   });
