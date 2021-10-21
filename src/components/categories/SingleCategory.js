@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import Navbar from '../ui/Navbar';
 import ProductCard from '../ui/ProductCard';
 import SingleCategoryHeader from './SingleCategoryHeader';
+import Sort from '../ui/Sort';
 
 const SingleCategory = () => {
   const location = useLocation();
@@ -35,11 +36,21 @@ const SingleCategory = () => {
   return (
     <div>
       <Navbar />
-      <div className='flex flex-wrap items-center justify-between gap-4'>
-        <h1>Showing: {singleCategory.length} Products</h1>
-      </div>
-      <div className='container grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
-        {singleCategoryData}
+      <div className='container my-20 md:my-32'>
+        <div className='flex flex-wrap items-center justify-between gap-4 mb-10 md:mb-12'>
+          <h1 className='text-lg font-medium text-gray-600 md:text-xl'>
+            Showing:{' '}
+            <span className='text-brand-primary'>
+              {singleCategory.length} Products
+            </span>
+          </h1>
+          <div>
+            <Sort />
+          </div>
+        </div>
+        <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
+          {singleCategoryData}
+        </div>
       </div>
     </div>
   );
