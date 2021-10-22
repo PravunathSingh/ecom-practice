@@ -5,6 +5,7 @@ const Wishlist = () => {
   return (
     <>
       <Navbar />
+      div
     </>
   );
 };
