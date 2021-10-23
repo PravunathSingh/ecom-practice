@@ -17,7 +17,7 @@ const ProductDetails = () => {
     <div className='font-rubik'>
       <Navbar />
       <div className='container'>
-        <h1 className='mt-24 text-4xl font-semibold text-center md:text-left md:text-5xl md:mt-32'>
+        <h1 className='mt-24 text-3xl font-semibold text-center text-brand-primary md:text-left md:text-5xl md:mt-32'>
           Product Details
         </h1>
       </div>
