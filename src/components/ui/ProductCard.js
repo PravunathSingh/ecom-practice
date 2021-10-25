@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({ category }) => {
   return (
     <div className='bg-gray-50'>
       <div className='overflow-hidden transition-all duration-200 border-2 border-gray-300 rounded-2xl hover:shadow-xl'>
-        <div className='relative grid mb-6 place-content-center aspect-w-16 aspect-h-9'>
+        <div className='mb-6 aspect-w-16 aspect-h-9'>
           <img
             src={category.image}
             alt='product'
