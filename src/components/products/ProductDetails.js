@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import Navbar from '../ui/Navbar';
+import Footer from '../ui/Footer';
 
 const ProductDetails = () => {
   const [productDetails, setProductDetails] = useState([]);
@@ -72,6 +73,8 @@ const ProductDetails = () => {
         </h4>
         <p className='text-xl text-gray-600'>{productDetails.description}</p>
       </div>
+
+      <Footer />
     </div>
   );
 };

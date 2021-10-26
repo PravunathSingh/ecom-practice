@@ -3,6 +3,7 @@ import axios from 'axios';
 import Navbar from '../components/ui/Navbar';
 import WishListCard from '../components/ui/WishListCard';
 import Sort from '../components/ui/Sort';
+import Footer from '../components/ui/Footer';
 
 const Wishlist = () => {
   const [wishlist, setWishlist] = useState([]);
@@ -76,6 +77,7 @@ const Wishlist = () => {
           {wishList}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -4,6 +4,7 @@ import ProductCard from '../ui/ProductCard';
 import Navbar from '../ui/Navbar';
 import Sort from '../ui/Sort';
 import CategoryHeader from '../categories/CategoryHeader';
+import Footer from '../ui/Footer';
 
 const ProductsList = () => {
   const [productsList, setProductsList] = useState([]);
@@ -74,6 +75,8 @@ const ProductsList = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

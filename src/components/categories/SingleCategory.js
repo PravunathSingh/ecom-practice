@@ -5,6 +5,7 @@ import Navbar from '../ui/Navbar';
 import ProductCard from '../ui/ProductCard';
 import SingleCategoryHeader from './SingleCategoryHeader';
 import Sort from '../ui/Sort';
+import Footer from '../ui/Footer';
 
 const SingleCategory = () => {
   const location = useLocation();
@@ -52,6 +53,8 @@ const SingleCategory = () => {
           {singleCategoryData}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

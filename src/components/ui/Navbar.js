@@ -43,7 +43,7 @@ const Navbar = () => {
         <div>
           <ul className='flex items-center gap-4'>
             <li className='mr-6 text-base font-medium transition-all duration-300 hover:border-b-2 hover:border-gray-800'>
-              <NavLink to='authentication'>Login / Register</NavLink>
+              <NavLink to='/login'>Login / Register</NavLink>
             </li>
             <li className='mr-6 text-base font-medium'>
               <NavLink to='/wishlist'>
