@@ -5,6 +5,7 @@ import Register from './components/auth/Register';
 import SingleCategory from './components/categories/SingleCategory';
 import ProductDetails from './components/products/ProductDetails';
 import ProductsList from './components/products/ProductsList';
+import About from './pages/About';
 import Cart from './pages/Cart';
 import Categories from './pages/Categories';
 import Contact from './pages/Contact';
@@ -16,6 +17,7 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path='/' component={Home} />
+        <Route exact path='/about' component={About} />
         <Route exact path='/categories' component={Categories} />
         <Route exact path='/products/category/:id' component={SingleCategory} />
         <Route exact path='/all-products' component={ProductsList} />

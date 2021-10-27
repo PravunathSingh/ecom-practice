@@ -23,11 +23,11 @@ const ProductDetails = () => {
         </h1>
       </div>
       <div className='container grid gap-12 place-content-center place-items-center lg:grid-cols-2 my-28'>
-        <div className='h-full rounded-xl'>
+        <div className='w-full h-auto aspect-w-4 aspect-h-3'>
           <img
             src={productDetails.image}
             alt='product-details'
-            className='w-full h-auto'
+            className='object-cover object-center'
           />
         </div>
 
