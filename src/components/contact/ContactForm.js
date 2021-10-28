@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <div className='font-rubik'>
+    <div className='px-8 py-6 shadow-xl font-rubik bg-bg-brand-dark rounded-xl'>
       <form>
         <div>
           <div className='mb-2 md:mb-3'>
