@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar from '../components/ui/Navbar';
 import CartItem from '../components/ui/CartItem';
 import Footer from '../components/ui/Footer';
+import Header from '../components/ui/Header';
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
@@ -21,7 +21,7 @@ const Cart = () => {
 
   return (
     <div className='font-rubik'>
-      <Navbar />
+      <Header />
       <div className='container my-20 md:my-24 lg:my-28'>
         <div className='grid lg:grid-cols-3'>
           <div className='lg:col-span-2'>

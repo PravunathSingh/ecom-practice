@@ -1,64 +1,86 @@
 import React from 'react';
+import { FaBars } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ toggleMobileMenu, active }) => {
   return (
-    <nav className='z-50 py-4 shadow-lg bg-gray-50 font-rubik'>
-      <div className='container flex items-center justify-between gap-8 xl:max-w-full'>
-        <div>
-          <NavLink to='/search' className='text-base font-medium'>
-            <i className='fa fa-search'></i> Search
-          </NavLink>
+    <div className='sticky top-0 z-50 opacity-100 bg-brand-bg'>
+      <nav className='shadow-lg bg-bg-brand-dark font-rubik'>
+        <div className='container flex flex-wrap items-center justify-between py-3 xl:max-w-full md:py-4'>
+          <a href='/'>
+            <h1 className='text-3xl font-bold lg:text-5xl text-brand-primary'>
+              BrandName
+            </h1>
+          </a>
+
+          <div className='ml-auto text-4xl cursor-pointer text-text-secondary hover:text-text-primary lg:hidden'>
+            <FaBars onClick={toggleMobileMenu} />
+          </div>
+
+          <div>
+            <ul className='hidden list-none lg:flex'>
+              <li className='py-2 ml-8 text-lg font-medium text-gray-500 hover:text-brand-primary'>
+                <NavLink to='/' activeClassName='activeLink' exact={true}>
+                  Home
+                </NavLink>
+              </li>
+              <li className='py-2 ml-8 text-lg font-medium text-gray-500 hover:text-brand-primary'>
+                <NavLink to='/about' activeClassName='activeLink'>
+                  About
+                </NavLink>
+              </li>
+              <li className='py-2 ml-8 text-lg font-medium text-gray-500 hover:text-brand-primary'>
+                <NavLink to='/categories' activeClassName='activeLink'>
+                  Categories
+                </NavLink>
+              </li>
+              <li
+                className='py-2 ml-8 text-lg font-medium text-gray-500 hover:text-brand-primary'
+                activeClassName='activeLink'
+              >
+                <NavLink to='/all-products' activeClassName='activeLink'>
+                  Products
+                </NavLink>
+              </li>
+              <li
+                className='py-2 ml-8 text-lg font-medium text-gray-500 hover:text-brand-primary'
+                activeClassName='activeLink'
+              >
+                <NavLink to='/contactUs' activeClassName='activeLink'>
+                  Contact
+                </NavLink>
+              </li>
+              <li
+                className='py-2 ml-8 text-lg font-medium text-gray-500 hover:text-brand-primary'
+                activeClassName='activeLink'
+              >
+                <NavLink to='/login' activeClassName='activeLink'>
+                  Login / SignUp
+                </NavLink>
+              </li>
+              <li
+                className='py-2 ml-8 text-lg font-medium text-gray-500 hover:text-brand-primary'
+                activeClassName='activeLink'
+              >
+                <NavLink to='/wishlist' activeClassName='activeLink'>
+                  WishList
+                </NavLink>
+              </li>
+              <li
+                className='py-2 ml-8 text-lg font-medium text-gray-500 hover:text-brand-primary'
+                activeClassName='activeLink'
+              >
+                <NavLink to='/cart' activeClassName='activeLink'>
+                  My Cart
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className='block xl:hidden'>
-          <NavLink to='/' className='text-center'>
-            Brand Name
-          </NavLink>
-        </div>
-        <div className='hidden xl:block'>
-          <ul className='flex items-center gap-4 p-0 list-none'>
-            <li className='mr-6 text-base font-medium transition-all duration-300 hover:border-b-2 hover:border-gray-800'>
-              <NavLink to='/'>Home</NavLink>
-            </li>
-            <li className='mr-6 text-base font-medium transition-all duration-300 hover:border-b-2 hover:border-gray-800'>
-              <NavLink to='/about'>About</NavLink>
-            </li>
-            <li className='mr-6 text-base font-medium transition-all duration-300 hover:border-b-2 hover:border-gray-800'>
-              <NavLink to='/categories'>Category</NavLink>
-            </li>
-            <li className='mr-6 text-3xl font-semibold'>
-              <NavLink to='/'>Brand Name</NavLink>
-            </li>
-            <li className='mr-6 text-base font-medium transition-all duration-300 hover:border-b-2 hover:border-gray-800'>
-              <NavLink to='/all-products'>Products</NavLink>
-            </li>
-            <li className='mr-6 text-base font-medium transition-all duration-300 hover:border-b-2 hover:border-gray-800'>
-              <NavLink to='/contactUs'>Contact</NavLink>
-            </li>
-            <li className='text-base font-medium transition-all duration-300 hover:border-b-2 hover:border-gray-800'>
-              <NavLink to='/blogs'>Blog</NavLink>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul className='flex items-center gap-4'>
-            <li className='mr-6 text-base font-medium transition-all duration-300 hover:border-b-2 hover:border-gray-800'>
-              <NavLink to='/login'>Login / Register</NavLink>
-            </li>
-            <li className='mr-6 text-base font-medium'>
-              <NavLink to='/wishlist'>
-                <i className='fa fa-heart'></i>
-              </NavLink>
-            </li>
-            <li className='text-base font-medium'>
-              <NavLink to='/cart'>
-                <i className='fas fa-cart-plus'></i>
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* <CurtainMenuPage open={open} /> */}
+    </div>
   );
 };
 

@@ -6,6 +6,7 @@ import ProductCard from '../ui/ProductCard';
 import SingleCategoryHeader from './SingleCategoryHeader';
 import Sort from '../ui/Sort';
 import Footer from '../ui/Footer';
+import Header from '../ui/Header';
 
 const SingleCategory = () => {
   const location = useLocation();
@@ -36,7 +37,7 @@ const SingleCategory = () => {
 
   return (
     <div>
-      <Navbar />
+      <Header />
       <div className='container my-20 md:my-32'>
         <div className='flex flex-wrap items-center justify-between gap-4 mb-10 md:mb-12'>
           <h1 className='text-lg font-medium text-gray-600 md:text-xl'>

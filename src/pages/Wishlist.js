@@ -4,6 +4,7 @@ import Navbar from '../components/ui/Navbar';
 import WishListCard from '../components/ui/WishListCard';
 import Sort from '../components/ui/Sort';
 import Footer from '../components/ui/Footer';
+import Header from '../components/ui/Header';
 
 const Wishlist = () => {
   const [wishlist, setWishlist] = useState([]);
@@ -25,7 +26,7 @@ const Wishlist = () => {
   });
   return (
     <>
-      <Navbar />
+      <Header />
       <div className='container my-20 font-rubik lg:my-28'>
         <div className='max-w-4xl'>
           <h1 className='mb-6 text-3xl font-semibold lg:text-5xl text-brand-primary lg:mb-8'>

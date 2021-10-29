@@ -1,11 +1,11 @@
 import React from 'react';
 import aboutHero from '../../assests/aboutHero.jpg';
-import Navbar from '../ui/Navbar';
+import Header from '../ui/Header';
 
 const AboutHeader = () => {
   return (
     <div>
-      <Navbar />
+      <Header />
       <div className='container my-16 lg:my-32 font-rubik'>
         <div className='grid gap-10 place-content-center place-items-center lg:grid-cols-2'>
           <div className='order-2 lg:order-1'>

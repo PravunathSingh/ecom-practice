@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .activeLink {
+    @apply border-b-4 border-brand-primary text-brand-primary;
+  }
+}
