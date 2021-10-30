@@ -1,35 +1,27 @@
-# create-react-app + tailwindcss + jit:
+# Ecommerce Demo
 
-This project is a ready made cra project that I have added tailwindcss + jit support to it.
+### Tasks Completed
 
-## Available Scripts
+- Fetching Categories Data from API (www.fakestoreapi.com)
+- Fetching Products Data from API (www.fakestoreapi.com)
+- Fetching Product Details Data from API (www.fakestoreapi.com)
+- Setting Wish list and Cart Items
+- Getting Single Category Data through Dynamic Routing
+- Setting Default Limit of Products in Categories Section
+- Added UI Components for Filter and Sort Products
+- Designed and Developed About, Contact, Authentication and the Home Page
 
-In the project directory, you can run:
+#### Time required to complete these task = 20 working days
 
-### `npm run dev`
+### Features that can be added later
 
-Runs the app with tailwindcss jit support, you must use this command for developement.
+- Implementing the Search, sort and filter functionality for products and categories
+- Adding Products (POST) to Wishlist and Cart
+- Implementing Authentication
+- Checkout and Payment Integration
+- Adding Lazy Loading and Dynamic Import of data to reduce loading time of website
+- Adding Pagination.
 
-### `npm run build`
+#### Time required to complete these task = 8 working days
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Total Time required to build a fully functional scaleable Ecommerce Web Application = 28 working days.

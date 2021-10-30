@@ -5,7 +5,7 @@ import heroCategory2 from '../../assests/heroCategory2.jpg';
 
 const HomeCategories = () => {
   return (
-    <div className='container my-16 font-rubik lg:my-28'>
+    <div className='container my-24 font-rubik lg:my-40'>
       <div className='grid gap-12 lg:grid-cols-3'>
         <div>
           <img src={heroCategory1} alt='' className='h-max rounded-xl' />
