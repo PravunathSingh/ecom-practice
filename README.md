@@ -2,12 +2,12 @@
 
 ### Tasks Completed
 
-- Fetching Categories Data from API (www.fakestoreapi.com)
-- Fetching Products Data from API (www.fakestoreapi.com)
-- Fetching Product Details Data from API (www.fakestoreapi.com)
+- Fetching Categories Data from API (https://fakestoreapi.com/products/categories)
+- Fetching Products Data from API (https://fakestoreapi.com/products)
+- Fetching Product Details Data from API (https://fakestoreapi.com/products/{productID})
 - Setting Wish list and Cart Items
-- Getting Single Category Data through Dynamic Routing
-- Setting Default Limit of Products in Categories Section
+- Getting Single Category Data through Dynamic Routing (https://fakestoreapi.com/products/category/{categoryName})
+- Setting Default Limit of Products in Categories Section (https://fakestoreapi.com/products?limit={n})
 - Added UI Components for Filter and Sort Products
 - Designed and Developed About, Contact, Authentication and the Home Page
 
